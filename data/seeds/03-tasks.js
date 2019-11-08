@@ -1,13 +1,35 @@
 
 exports.seed = function(knex) {
-  // Deletes ALL existing entries
-  return knex('table_name').del()
-    .then(function () {
-      // Inserts seed entries
-      return knex('table_name').insert([
-        {id: 1, colName: 'rowValue1'},
-        {id: 2, colName: 'rowValue2'},
-        {id: 3, colName: 'rowValue3'}
-      ]);
-    });
+  return knex("tasks").insert([
+    {
+      desription: "test 1",
+      notes: "optional",
+      completed: false,
+      project_id: 1
+    },
+    {
+      desription: "test 2",
+      notes: "optional",
+      completed: false,
+      project_id: 2
+    },
+    {
+      desription: "test 3",
+      notes: "optional",
+      completed: false,
+      project_id: 3
+    },
+    {
+      desription: "test 4",
+      notes: "optional",
+      completed: false,
+      project_id: 3
+    },
+    {
+      desription: "test 4",
+      notes: "optional",
+      completed: false,
+      project_id: 1
+    }
+  ]);
 };
